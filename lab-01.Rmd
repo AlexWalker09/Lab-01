@@ -215,7 +215,7 @@ visitors %>%
 
 _Observe in question 6 that the mean statistics across all settings are much larger than the corresponding median statistics. Discuss in your group what this suggests about the data._
 
-**Write your answer here**
+This suggests that there are a few outliers that have a much larger number of visitors in 2022 compared to the rest of the data set which skews the mean.
 
 
 
@@ -248,11 +248,12 @@ _How many tourist attractions are there in each of the 4 nations? From this, dis
 
 
 ```{r Ex_l}
-#________ %>%
-#  ______(_______)
+visitors_with_nations %>%
+  group_by(nation) %>%
+  count("atraction")
 ```
 
-
+This data shows that the inter-quartile range for Wales and Northern Ireland are inaccurate since there is a small data set.
 
 # Challenging Exercises
 
